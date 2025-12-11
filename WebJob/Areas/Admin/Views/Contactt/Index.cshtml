@@ -68,7 +68,8 @@
                                 {
                                     <button data-id="@contact.Id" class="btn btn-warning btn-sm btnMarkAsRead">Đánh dấu đã đọc</button>
                                 }
-                                <a href="@Url.Action("Details", "Contactt", new { id = contact.Id })" class="btn btn-info btn-sm">Xem chi tiết</a>
+                            <a href="@Url.Action("Details", "Contact", new { id = contact.Id })"
+                               class="btn btn-info btn-sm">Xem chi tiết</a>
                                 <button data-id="@contact.Id" class="btn btn-danger btn-sm btnDelete">Xóa</button>
                             </td>
                         </tr>

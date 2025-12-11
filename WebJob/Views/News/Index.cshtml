@@ -19,7 +19,8 @@
                 {
                     <div class="col-md-4 col-sm-12 col-12 news-item">
                         <div class="news-item-inner">
-                            <a title="@item.Title" href="/@item.Alias-n@(item.NewsID)">
+                            <a title="@item.Title"
+                               href="@Url.Action("Detail", "News", new { alias = item.Alias, id = item.NewsID })">
                                 <div class="news-thumb" style="background-image: url(@item.ImageURL);"></div>
                             </a>
                             <div class="news-details">
@@ -27,12 +28,12 @@
                                     <a href="#tag1">@item.Tag</a>
                                 </div>
                                 <div class="title">
-                                    <a href="/@item.Alias-n@(item.NewsID)">
+                                    <a href="@Url.Action("Detail", "News", new { alias = item.Alias, id = item.NewsID })">
                                         @item.Title
                                     </a>
                                 </div>
                                 <div class="meta">
-                                   @item.Meta
+                                    @item.Meta
                                 </div>
                             </div>
 

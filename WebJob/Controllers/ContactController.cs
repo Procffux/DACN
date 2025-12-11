@@ -18,6 +18,13 @@ namespace WebJob.Controllers
         }
 
 
+        public ActionResult Details(int id)
+        {
+            var item = db.Contacts.Find(id);
+            if (item == null) return HttpNotFound();
+
+            return View(item);
+        }
 
         public ActionResult Contact()
         {
@@ -30,7 +37,7 @@ namespace WebJob.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.Website = "NowJobs";
+                model.Website = "TimViecPlus";
                 model.IsRead = false;
                 model.CreatedDate = DateTime.Now; // Ngày hiện tại
                 model.CreatedBy = model.Name;
